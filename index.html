@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokus Podcast</title>
     <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <header>
         <div class="header-content">
@@ -12,7 +13,12 @@
                 <img src="pokus2.png" alt="Pokus Logo" />
             </div>
             <nav>
-                <ul>
+                <div class="hamburger-menu" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul id="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="episodes.html">Episodes</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
@@ -36,7 +42,6 @@
         </div>
 
         <div class="episodes">
-
             <div class="episode-card">
                 <img src="mark.jpg" alt="Episode 156">
                 <div class="episode-details">
@@ -76,13 +81,22 @@
                 </div>
             </div>
         </div>
-                <div class="view-all-button">
-                    <a href="episodes.html">View All</a>
-                </div>
+
+        <!-- View All Button -->
+        <div class="view-all-button">
+            <a href="episodes.html">View All</a>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Pokus Podcast. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("nav-links");
+            navLinks.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>

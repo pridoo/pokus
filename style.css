@@ -28,20 +28,22 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
 }
 
 header .logo img {
     height: 90px; /* Increased logo size */
-    margin-left: 180px; /* Move logo more to the right */
+    margin-left: 40px;
 }
 
+/* Regular Navigation for Desktop */
 header nav ul {
     list-style-type: none;
     display: flex;
-    margin-right: 40px;
     gap: 20px;
 }
 
+/* Navbar items */
 header nav a {
     text-decoration: none;
     color: #fff;
@@ -54,6 +56,38 @@ header nav a {
 
 header nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hamburger menu - hidden by default */
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Mobile Navigation links - Hidden by default */
+#nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Show nav links when hamburger is clicked */
+#nav-links.active {
+    display: flex; /* Make them visible when toggled */
 }
 
 /* Landing page styles */
@@ -129,27 +163,9 @@ button a:hover {
     text-decoration: none;
 }
 
-/* Footer styles */
-footer {
-    background-color: #1f1f1f;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Links */
-a {
-    text-decoration: none;
-    color: #4CAF50;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 /* Episodes Section */
 .episode-container {
-    background-color: #000; /* Dark red */
+    background-color: #000;
     padding: 60px 20px;
     text-align: center;
     width: 100%;
@@ -176,7 +192,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Center align cards */
-    gap: 20px; /* Remove the gap if not needed */
+    gap: 20px;
 }
 
 .episode-card {
@@ -187,7 +203,7 @@ a:hover {
     text-align: center;
     box-shadow: none; /* Removed shadow */
     transition: transform 0.3s ease;
-    margin: 0; /* Removed margin to eliminate any space between cards */
+    margin: 0;
 }
 
 .episode-card:hover {
@@ -251,14 +267,50 @@ a:hover {
         height: 50px; /* Adjust logo size for smaller screens */
     }
 
-    .landing h2 {
-        font-size: 2rem;
+    /* Show hamburger menu only on mobile */
+    .hamburger-menu {
+        display: flex;
+    }
+    /* Hide regular navigation links on mobile */
+    header nav ul {
+        display: none;
     }
 
-    .landing p {
-        font-size: 1rem;
+    /* Mobile Navigation links styling */
+    header nav ul li a {
+        width: 100%;
+        background-color: #6b0000;
+        padding: 15px;
+        text-align: left;
+        color: white;
+        font-size: 1.2rem;
     }
 
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #6b0000;
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    
+
+    header nav ul li a:hover {
+        background-color: #9b0a22;
+    }
+
+    /* Mobile view styling */
     .episodes {
         flex-direction: column;
         align-items: center;
@@ -272,3 +324,10 @@ a:hover {
         width: 100%;
     }
 }
+
+@media (min-width: 769px) {
+    #nav-links {
+        display: flex !important;
+    }
+}
+
