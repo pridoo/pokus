@@ -1,0 +1,274 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0; /* Ensure no global margin */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(to bottom, #6b0000, #9b0a22); /* Dark red gradient */
+    position: absolute;
+    border-radius: 30px;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 90px; /* Increased logo size */
+    margin-left: 180px; /* Move logo more to the right */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 40px;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: transparent; /* Remove white background */
+    border-radius: 0; /* Remove rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Landing page styles */
+.landing {
+    position: relative;
+    background: url('mic.png') no-repeat center center/cover;
+    color: #fff;
+    padding: 120px 40px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0; /* Ensure there's no space between landing and episode section */
+}
+
+.landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    z-index: 1;
+}
+
+.landing-content {
+    position: relative;
+    text-align: center;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.landing h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.landing p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button a:hover {
+    text-decoration: none;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Episodes Section */
+.episode-container {
+    background-color: #000; /* Dark red */
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.episode-header {
+    margin-bottom: 40px;
+}
+
+.start-listen {
+    font-size: 1.2rem;
+    color: #ff0000; /* Red text */
+    margin-bottom: 10px;
+}
+
+.recent-episodes {
+    font-size: 2rem;
+    color: #fff; /* White text */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.episodes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+    gap: 20px; /* Remove the gap if not needed */
+}
+
+.episode-card {
+    background-color: #f4f4f4; /* Light beige/cream for contrast */
+    border-radius: 10px;
+    width: 280px; /* Adjusted width for better fit */
+    padding: 15px;
+    text-align: center;
+    box-shadow: none; /* Removed shadow */
+    transition: transform 0.3s ease;
+    margin: 0; /* Removed margin to eliminate any space between cards */
+}
+
+.episode-card:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+.episode-card img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.episode-card h3 {
+    font-size: 1.25rem;
+    color: #333; /* Dark text for clarity */
+    margin-bottom: 10px;
+}
+
+.episode-card p {
+    color: #555; /* Slightly darkened text for better readability */
+    margin-bottom: 10px;
+}
+
+.episode-card span {
+    display: block;
+    margin-bottom: 15px;
+    color: #777; /* Subtle color for dates */
+}
+
+.episode-card audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* View All Button */
+.view-all-button {
+    margin-top: 40px;
+}
+
+.view-all-button a {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-all-button a:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header .logo img {
+        height: 50px; /* Adjust logo size for smaller screens */
+    }
+
+    .landing h2 {
+        font-size: 2rem;
+    }
+
+    .landing p {
+        font-size: 1rem;
+    }
+
+    .episodes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .episode-card {
+        width: 80%;
+    }
+
+    .view-all-button a {
+        width: 100%;
+    }
+}

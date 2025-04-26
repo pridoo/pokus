@@ -1,0 +1,116 @@
+/* Episodes Section */
+.episode-container {
+    background-color: #000; 
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 0; /* Remove space above episodes section */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.episode-header {
+    margin-bottom: 40px;
+}
+
+.start-listen {
+    font-size: 1.2rem;
+    color: #ff0000; /* Red text */
+    margin-bottom: 10px;
+}
+
+.recent-episodes {
+    font-size: 2rem;
+    color: #fff; /* White text */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.episodes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+    gap: 20px; /* Remove the gap if not needed */
+}
+
+.episode-card {
+    background-color: #f4f4f4; /* Light beige/cream for contrast */
+    border-radius: 10px;
+    width: 280px; /* Adjusted width for better fit */
+    padding: 15px;
+    text-align: center;
+    box-shadow: none; /* Removed shadow */
+    transition: transform 0.3s ease;
+    margin: 0; /* Removed margin to eliminate any space between cards */
+}
+
+.episode-card:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+.episode-card img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.episode-card h3 {
+    font-size: 1.25rem;
+    color: #333; /* Dark text for clarity */
+    margin-bottom: 10px;
+}
+
+.episode-card p {
+    color: #555; /* Slightly darkened text for better readability */
+    margin-bottom: 10px;
+}
+
+.episode-card span {
+    display: block;
+    margin-bottom: 15px;
+    color: #777; /* Subtle color for dates */
+}
+
+.episode-card audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* View All Button */
+.view-all-button {
+    margin-top: 40px;
+}
+
+.view-all-button a {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-all-button a:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .episodes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .episode-card {
+        width: 80%;
+    }
+}
