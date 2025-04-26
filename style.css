@@ -265,6 +265,7 @@ button a:hover {
 @media (max-width: 768px) {
     header .logo img {
         height: 50px; /* Adjust logo size for smaller screens */
+        margin-left: 40px;
     }
 
     /* Show hamburger menu only on mobile */
