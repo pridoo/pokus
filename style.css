@@ -32,8 +32,8 @@ header {
 }
 
 header .logo img {
-    height: 90px; /* Increased logo size */
-    margin-left: 40px;
+    height: 100px; /* Increased logo size */
+    margin-left: 120px;
 }
 
 /* Regular Navigation for Desktop */
